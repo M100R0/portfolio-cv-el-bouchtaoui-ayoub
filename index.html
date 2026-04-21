@@ -1,89 +1,177 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Ayoub El Bouchtaoui - CV</title>
+<title>Ayoub El Bouchtaoui - CV</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#eef2f6;
-      color:#222;
-    }
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#111;
+  --card:#f7f7f7;
+  --border:#e5e5e5;
+  --accent:#1f3b57;
+  --bar:#1f3b57;
+}
 
-    header{
-      background:#1f3b57;
-      color:white;
-      padding:40px;
-      text-align:center;
-    }
+body.dark{
+  --bg:#0f172a;
+  --text:#e2e8f0;
+  --card:#1e293b;
+  --border:#334155;
+  --accent:#60a5fa;
+  --bar:#60a5fa;
+}
 
-    header h1{
-      margin:0;
-      font-size:36px;
-      letter-spacing:2px;
-    }
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s;
+  line-height:1.6;
+}
 
-    header p{
-      margin:5px;
-      font-size:14px;
-    }
+/* HERO */
+header{
+  text-align:center;
+  padding:70px 20px;
+  border-bottom:1px solid var(--border);
+  animation:fade 0.8s ease;
+}
 
-    .links a{
-      color:white;
-      margin:0 10px;
-      text-decoration:none;
-      font-weight:bold;
-    }
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:20px;
-      display:grid;
-      grid-template-columns:1fr 2fr;
-      gap:20px;
-    }
+header h1{
+  margin:0;
+  font-size:44px;
+  letter-spacing:2px;
+}
 
-    .card{
-      background:white;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
-      margin-bottom:15px;
-    }
+header p{
+  margin:6px 0;
+  opacity:0.8;
+}
 
-    h2{
-      border-bottom:2px solid #1f3b57;
-      padding-bottom:5px;
-      font-size:16px;
-    }
+.links a{
+  margin:0 10px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:bold;
+}
 
-    ul{
-      padding-left:18px;
-    }
+.links a:hover{
+  color:var(--accent);
+}
 
-    .info p{
-      margin:5px 0;
-      font-size:14px;
-    }
+/* BUTTONS */
+button{
+  margin:5px;
+  padding:8px 14px;
+  border:1px solid var(--border);
+  background:transparent;
+  cursor:pointer;
+  border-radius:6px;
+  font-weight:bold;
+  transition:0.2s;
+}
 
-    @media print{
-      button{display:none;}
-    }
+button:hover{
+  transform:scale(1.05);
+  border-color:var(--accent);
+}
 
-    button{
-      padding:8px 12px;
-      margin:5px;
-      border:none;
-      cursor:pointer;
-      border-radius:5px;
-      font-weight:bold;
-    }
-  </style>
+/* LAYOUT */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:30px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  margin-bottom:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+}
+
+h2{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-bottom:1px solid var(--border);
+  padding-bottom:6px;
+  margin-bottom:12px;
+  color:var(--accent);
+}
+
+/* SKILL BAR */
+.skill{
+  margin-bottom:10px;
+}
+
+.bar{
+  height:6px;
+  background:#ddd;
+  border-radius:5px;
+  overflow:hidden;
+}
+
+.bar span{
+  display:block;
+  height:100%;
+  background:var(--bar);
+}
+
+/* WIDTHS */
+.w90{width:90%}
+.w85{width:85%}
+.w80{width:80%}
+.w75{width:75%}
+
+/* CONTACT */
+.contact a{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  border:1px solid var(--accent);
+  border-radius:6px;
+  text-decoration:none;
+  color:var(--text);
+}
+
+.contact a:hover{
+  background:var(--accent);
+  color:white;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .container{
+    grid-template-columns:1fr;
+  }
+}
+
+/* PRINT */
+@media print{
+  button{display:none;}
+}
+</style>
 </head>
 
 <body>
@@ -93,85 +181,96 @@
   <p>Fachinformatiker | Angewandte Informatik | IT-Security</p>
 
   <div class="links">
-    <a href="https://github.com/m100r0">GitHub</a>
-    <a href="https://m100r0.github.io/website/">Portfolio</a>
+    <a href="https://github.com/m100r0" target="_blank">GitHub</a>
+    <a href="https://m100r0.github.io/website/" target="_blank">Portfolio</a>
   </div>
 
-  <button onclick="window.print()">📄 PDF</button>
+  <div>
+    <button onclick="toggleDark()">🌙 Dark Mode</button>
+    <button onclick="window.print()">📄 PDF</button>
+    <button onclick="toggleLang()">🌐 DE / EN</button>
+  </div>
 </header>
 
 <div class="container">
 
-  <!-- LEFT SIDE -->
-  <div>
+<!-- LEFT -->
+<div>
 
-    <div class="card">
-      <h2>Kontakt</h2>
-      <div class="info">
-        <p>📍 Weichselring 127, 50765 Köln</p>
-        <p>📞 +49 176 26604903</p>
-        <p>📧 aelbouchtaoui982@gmail.com</p>
-      </div>
-    </div>
+<div class="card contact">
+<h2>Kontakt</h2>
+<p>📍 Köln, Deutschland</p>
+<p>📞 +49 176 26604903</p>
+<p>📧 aelbouchtaoui982@gmail.com</p>
+<a href="mailto:aelbouchtaoui982@gmail.com">Send Email</a>
+</div>
 
-    <div class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Python, Java</li>
-        <li>React Basics</li>
-        <li>SQL</li>
-        <li>Git & GitHub</li>
-        <li>Linux & Windows</li>
-      </ul>
-    </div>
+<div class="card">
+<h2>Skills</h2>
 
-    <div class="card">
-      <h2>Sprachen</h2>
-      <ul>
-        <li>Deutsch: B2</li>
-        <li>Englisch: Good</li>
-        <li>Arabisch: Native</li>
-        <li>Französisch: Basic</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- RIGHT SIDE -->
-  <div>
-
-    <div class="card">
-      <h2>Profil</h2>
-      <p>
-        Ich bin ausgebildeter Fachinformatiker für Systemintegration mit starkem Interesse an der Anwendungsentwicklung.
-        Ich habe solide Kenntnisse in Python, Java und Webentwicklung (HTML, CSS, JavaScript) und möchte mich weiter in
-        Richtung Softwareentwicklung und IT-Security entwickeln.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Berufserfahrung</h2>
-      <p><b>RESELECTRIQUE</b> – IT & Netzwerke (10/2022 – 01/2023)</p>
-      <p><b>IMC.NET</b> – IT Networking (04/2022 – 06/2022)</p>
-      <p><b>GHANDI COUNCIL</b> – IT Support (06/2021 – 11/2021)</p>
-    </div>
-
-    <div class="card">
-      <h2>Ausbildung</h2>
-      <p>Fachinformatiker für Systemintegration (2020–2022)</p>
-      <p>Fachabitur – Informatik & Mathematik</p>
-    </div>
-
-    <div class="card">
-      <h2>Projekte</h2>
-      <p>Portfolio Website (HTML, CSS, JavaScript)</p>
-      <p>Responsive Web Design + GitHub Deployment</p>
-    </div>
-
-  </div>
+<div class="skill">HTML/CSS<div class="bar"><span class="w90"></span></div></div>
+<div class="skill">JavaScript<div class="bar"><span class="w85"></span></div></div>
+<div class="skill">Python<div class="bar"><span class="w80"></span></div></div>
+<div class="skill">Java<div class="bar"><span class="w75"></span></div></div>
+<div class="skill">Git/GitHub<div class="bar"><span class="w85"></span></div></div>
 
 </div>
+
+<div class="card">
+<h2>Sprachen</h2>
+<ul>
+<li>Deutsch: B2</li>
+<li>English: Good</li>
+<li>Arabic: Native</li>
+</ul>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div>
+
+<div class="card">
+<h2>Profil</h2>
+<p id="profile">
+Fachinformatiker mit Fokus auf Softwareentwicklung, Webentwicklung und IT-Security.
+Erfahrung in Systemintegration, Netzwerken und modernen Webtechnologien.
+</p>
+</div>
+
+<div class="card">
+<h2>Erfahrung</h2>
+<p><b>RESELECTRIQUE</b> – IT & Netzwerke</p>
+<p><b>IMC.NET</b> – System Administration</p>
+<p><b>GHANDI COUNCIL</b> – IT Support</p>
+</div>
+
+<div class="card">
+<h2>Projekte</h2>
+<p>Portfolio Website (HTML, CSS, JS)</p>
+<p>GitHub Deployment + Responsive Design</p>
+<p>Interactive CV Website (this project)</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+
+function toggleLang(){
+  const p=document.getElementById("profile");
+
+  if(p.innerText.includes("Fachinformatiker")){
+    p.innerText="IT professional focused on software development, web development and IT security with experience in systems and networking.";
+  }else{
+    p.innerText="Fachinformatiker mit Fokus auf Softwareentwicklung, Webentwicklung und IT-Security. Erfahrung in Systemintegration und Netzwerken.";
+  }
+}
+</script>
 
 </body>
 </html>
