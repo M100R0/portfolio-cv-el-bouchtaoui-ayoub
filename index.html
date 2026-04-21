@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Ayoub El Bouchtaoui - CV | Fachinformatiker & Angewandte Informatik</title>
+  <meta name="description" content="Lebenslauf von Ayoub El Bouchtaoui - Fachinformatiker für Systemintegration mit Fokus auf Angewandte Informatik, Softwareentwicklung und IT-Security." />
+  <meta name="keywords" content="CV, Lebenslauf, IT, Fachinformatiker, Angewandte Informatik, SAP Security, Developer" />
+  <meta name="author" content="Ayoub El Bouchtaoui" />
+
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --card: #ffffff;
+      --text: #222;
+      --primary: #1f3b57;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --primary: #60a5fa;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .buttons button {
+      margin: 6px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 5px;
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    .hero {
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    @media print {
+      .buttons { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>AYOUB EL BOUCHTAOUI</h1>
+  <p>Fachinformatiker | Angewandte Informatik | IT-Security</p>
+  <p>Köln, Deutschland</p>
+
+  <div class="buttons">
+    <button onclick="toggleDark()">🌙 Dark Mode</button>
+    <button onclick="downloadPDF()">📄 Download PDF</button>
+    <button onclick="switchLang()">DE / EN</button>
+  </div>
+
+  <p>
+    <a href="https://github.com/m100r0" style="color:white">GitHub</a> |
+    <a href="https://m100r0.github.io/website/" style="color:white">Portfolio</a>
+  </p>
+</header>
+
+<div class="hero">
+  Interactive CV Website | Built with HTML, CSS & JavaScript | Demonstrating Web Development Skills
+</div>
+
+<div class="container">
+
+  <div>
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, Java</li>
+        <li>React Basics</li>
+        <li>SQL</li>
+        <li>Git & GitHub</li>
+        <li>Linux & Windows</li>
+        <li>IT Security Basics</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Languages</h2>
+      <ul>
+        <li>German: B2</li>
+        <li>English: Good</li>
+        <li>Arabic: Native</li>
+        <li>French: Basic</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Interest</h2>
+      <ul>
+        <li>IT Security & SAP Security</li>
+        <li>Software Development</li>
+        <li>System Administration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+
+    <div class="card">
+      <h2>Profile</h2>
+      <p>
+        IT professional with strong interest in Angewandte Informatik and IT Security.
+        Experienced in system administration, networking and software development.
+        Focus on SAP Security and enterprise systems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Experience</h2>
+      <p>RESELECTRIQUE - Network & IT Systems</p>
+      <p>IMC.NET - System Administration</p>
+      <p>GHANDI COUNCIL - IT Support</p>
+    </div>
+
+    <div class="card">
+      <h2>SEO Advantage</h2>
+      <p>This CV website demonstrates practical web development, responsive design, and interactive UI skills.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+let isGerman = true;
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+function downloadPDF() {
+  window.print();
+}
+
+function switchLang() {
+  isGerman = !isGerman;
+  alert("Language toggle is demo mode (can be extended)");
+}
+</script>
+
+</body>
+</html>
